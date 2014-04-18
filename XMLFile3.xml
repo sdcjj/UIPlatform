@@ -1,0 +1,37 @@
+﻿AddProperty("Id", "标识符", "数据列的唯一标识符。系统生成，不允许修改。", categoryBase, true, true, typeof(string), typeof(DepElement), null, null, null);
+AddProperty("Code", "列编号", "数据列的编号。不能为空，不允许重复。", categoryBase, false, true, typeof(string), typeof(DepElement), null, null, null);
+AddProperty("Name", "列名称", "数据列的名称。不能为空，不允许重复。", categoryBase, false, true, typeof(string), typeof(DepElement), null, null, null);
+
+bool readOnly = false;
+//if (this.element.IsVirtual == true)
+//    readOnly = false;
+AddProperty("DataType", "数据类型", "数据列对应的数据类型", categoryBase, readOnly, true, typeof(string), typeof(DepElement), null, null, null);
+
+AddProperty("ColLength", "长度", "数据列的长度", categoryBase, false, true, typeof(string), typeof(DepElement), null, null, null);
+AddProperty("ColPrec", "精度", "数据列的精度", categoryBase, false, true, typeof(string), typeof(DepElement), null, null, null);
+AddProperty("DefaultValue", "默认值", "数据列的默认值", categoryBase, false, true, typeof(string), typeof(DepElement), null, null, null);
+AddProperty("IsMust", "是否必输", "该数据列是否必须输入值", categoryBase, false, true, typeof(bool), typeof(DepElement), new BoolConverter(), null, null);
+AddProperty("IsOnly", "是否唯一", "该数据列的值是否唯一", categoryBase, false, true, typeof(bool), typeof(DepElement), new BoolConverter(), null, null);
+AddProperty("IsReadOnly", "是否只读", "该数据列是否只读", categoryBase, false, true, typeof(bool), typeof(DepElement), new BoolConverter(), null, null);
+AddProperty("IsVirtualColumn", "是否虚拟列", "该列是否为虚拟列。\n虚拟列是用户自定义列。\n如果当前的数据列无法满足数据交换包需求，就需要定义虚拟列。\n虚拟列可以定义计算表达式。", categoryBase, true, true, typeof(bool), typeof(DepElement), new BoolConverter(), null, null);
+AddProperty("IsValidHelpInfo", "是否校验帮助信息", "如果选择‘是’，则在源（目标）数据校验时，校验该列数据的相应帮助信息是否存在。", categoryBase, false, true, typeof(bool), typeof(DepElement), new BoolConverter(), null, null);
+AddProperty("IsUsedToInverse", "是否用于反向映射", "如果该列要应用于反向映射，则本处必须设置为‘是’。", categoryAdvanced, false, true, typeof(bool), typeof(DepElement), new BoolConverter(), null, null);
+
+//AddProperty("VIConditionType", "用于索引界面", "凭证接口专用。待表达式编辑器完善后去掉该属性", "特殊设置", false, true, typeof(string), typeof(DepElement), new VIConditionTypeConverter(), null, null);
+if (this.element.IsVirtual == true)
+{
+AddProperty("ComputingExpression", "计算表达式", "为虚拟列定义计算表达式。", categoryAdvanced, false, true, typeof(string), typeof(DepElement), null, typeof(DepElementComputingExprEditor), null);
+AddProperty("IsUsedToGroup", "是否用于分组", "设置该列是否用于目标分组依据，默认为‘否’。", categoryAdvanced, false, true, typeof(bool), typeof(DepElement), new BoolConverter(), null, null);
+}
+else
+{
+AddProperty("EditType", "编辑类型", "该数据列的编辑类型：手工、枚举、帮助参照、智能帮助参照。\n如果是枚举，则需要设置枚举值。\n如果是帮助，则需要设置帮助信息。", categoryEdit, false, true, typeof(DepEditType), typeof(DepElement), new EditTypeConverter(), null, null);
+AddProperty("HelpDefine", "帮助定义", "定义该列的帮助信息", categoryEdit, false, true, typeof(BaseDictInfo), typeof(DepElement), new DepElementHelpDefineConverter(this.element), typeof(DepElementHelpDefineTypeEditor), null);
+AddProperty("EnumValue", "枚举", "定义该列的枚举信息", categoryEdit, true, true, typeof(DepElement), typeof(DepElement), new DepElementEnumValueTypeConverter(this.element), typeof(DepElementEnumValueTypeEditor), null);
+bool readOnlyAsso = true;
+if (this.element.HasAssociation == true)
+readOnlyAsso = false;
+AddProperty("IsUsedAssociation", "是否启用关联信息", "如果启用关联信息，在数据转换时系统会自动生成该列的关联列的数据，而在列映射中不需要为该列的关联列定义表达式。\n该属性只针对有关联信息的列设置。", categoryEdit, readOnlyAsso, true, typeof(bool), typeof(DepElement), new BoolConverter(), null, null);
+}
+AddProperty("IsExported", "是否输出", "设置该列是否需要导出到文件中，默认为‘是’。", categoryAdvanced, false, true, typeof(bool), typeof(DepElement), new BoolConverter(), null, null);
+AddProperty("IsUseAssociationExportModel", "是否将关联设置应用到导出模板", "是否将关联设置应用到导出模板，默认为‘是’。", categoryAdvanced, false, true, typeof(bool), typeof(DepElement), new BoolConverter(), null, null);<?xml version="1.0" encoding="utf-8" ?> 

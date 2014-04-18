@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Menu>
+  <MenuItem Id="001" Name="系统" BeginGroup="0" Icon="">
+    <MenuItem Id="001.001" Name="新建" BeginGroup="0" Icon="">
+      <MenuItem Id="001.001.001" Name="项目" BeginGroup="0" Icon="新建项目"></MenuItem>
+      <MenuItem Id="001.001.002" Name="文件" BeginGroup="0" Icon="新建文件"></MenuItem>
+      <MenuItem Id="001.001.003" Name="空白解决方案" BeginGroup="0" Icon="新建解决方案"></MenuItem>
+    </MenuItem>
+    <MenuItem Id="001.002" Name="打开" BeginGroup="0" Icon="打开"></MenuItem>
+    <MenuItem Id="001.003" Name="关闭" BeginGroup="0" Icon="关闭"></MenuItem>
+    <MenuItem Id="001.004" Name="另存为" BeginGroup="0" Icon="另存为"></MenuItem>
+    <MenuItem Id="001.005" Name="添加新建项" BeginGroup="1" Icon="添加新建项"></MenuItem>
+    <MenuItem Id="001.006" Name="添加现有项" BeginGroup="0" Icon="添加现有项"></MenuItem>
+    <MenuItem Id="001.007" Name="退出" BeginGroup="1" Icon=""></MenuItem>
+  </MenuItem>
+  <MenuItem Id="002" Name="调试" BeginGroup="0" Icon="">
+    <MenuItem Id="002.001" Name="启动调试" BeginGroup="0" Icon="启动调试"></MenuItem>
+    <MenuItem Id="002.002" Name="停止调试" BeginGroup="0" Icon="停止调试"></MenuItem>
+  </MenuItem>
+  <MenuItem Id="003" Name="编辑" BeginGroup="0" Icon="">
+    <MenuItem Id="003.001" Name="撤销" BeginGroup="0" Icon="撤销"></MenuItem>
+    <MenuItem Id="003.002" Name="重做" BeginGroup="0" Icon="重做"></MenuItem>
+    <MenuItem Id="003.003" Name="复制" BeginGroup="1" Icon="复制"></MenuItem>
+    <MenuItem Id="003.004" Name="粘贴" BeginGroup="0" Icon="粘贴"></MenuItem>
+    <MenuItem Id="003.005" Name="剪切" BeginGroup="0" Icon="剪切"></MenuItem>
+    <MenuItem Id="003.006" Name="删除" BeginGroup="0" Icon="删除"></MenuItem>
+    <MenuItem Id="003.007" Name="全选" BeginGroup="1" Icon="全选"></MenuItem>
+  </MenuItem>
+  <MenuItem Id="004" Name="布局" BeginGroup="0" Icon="">
+    <MenuItem Id="004.001" Name="保存" BeginGroup="0" Icon="保存"></MenuItem>
+    <MenuItem Id="004.002" Name="加载" BeginGroup="0" Icon="加载"></MenuItem>
+    <MenuItem Id="004.003" Name="左对齐" BeginGroup="1" Icon="左对齐"></MenuItem>
+    <MenuItem Id="004.004" Name="右对齐" BeginGroup="0" Icon="右对齐"></MenuItem>
+    <MenuItem Id="004.005" Name="居中对齐" BeginGroup="0" Icon="居中对齐"></MenuItem>
+    <MenuItem Id="004.006" Name="顶端对齐" BeginGroup="1" Icon="顶端对齐"></MenuItem>
+    <MenuItem Id="004.007" Name="底端对齐" BeginGroup="0" Icon="底端对齐"></MenuItem>
+    <MenuItem Id="004.008" Name="中间对齐" BeginGroup="0" Icon="中间对齐"></MenuItem>
+    <MenuItem Id="004.009" Name="使宽度相同" BeginGroup="1" Icon="使宽度相同"></MenuItem>
+    <MenuItem Id="004.010" Name="使高度相同" BeginGroup="0" Icon="使高度相同"></MenuItem>
+    <MenuItem Id="004.011" Name="使大小相同" BeginGroup="0" Icon="使大小相同"></MenuItem>
+  </MenuItem>
+  <MenuItem Id="005" Name="窗体" BeginGroup="0" Icon="">
+    <MenuItem Id="005.001" Name="恢复默认布局" BeginGroup="0" Icon=""></MenuItem>
+    <MenuItem Id="005.002" Name="左右布局" BeginGroup="0" Icon=""></MenuItem>
+  </MenuItem>
+</Menu>

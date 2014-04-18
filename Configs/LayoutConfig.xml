@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Layout>
+  <LeftPanel>
+    <ToolPanel>
+      <Tools Name="基础控件">
+        <Tool Dll="System.Windows.Forms" ClassName="Button">按钮</Tool>
+        <Tool Dll="System.Windows.Forms" ClassName="Label">标签</Tool>
+        <Tool Dll="System.Windows.Forms" ClassName="TextBox">文本框</Tool>
+        <Tool Dll="System.Windows.Forms" ClassName="CheckBox">多选框</Tool>
+        <Tool Dll="System.Windows.Forms" ClassName="DateTimePicker">时间选择器</Tool>
+        <Tool Dll="System.Windows.Forms" ClassName="RadioButton">单选</Tool>
+        <Tool Dll="System.Windows.Forms" ClassName="LinkLabel">链接标签</Tool>
+        <Tool Dll="System.Windows.Forms" ClassName="GroupBox">分组框</Tool>
+        <Tool Dll="System.Windows.Forms" ClassName="PictureBox">图片</Tool>
+        <Tool Dll="System.Windows.Forms" ClassName="ComboBox">下拉框</Tool>
+        <Tool Dll="System.Windows.Forms" ClassName="MonthCalendar">月份选择器</Tool>
+        <Tool Dll="System.Windows.Forms" ClassName="RichTextBox">富文本框</Tool>
+        <Tool Dll="System.Windows.Forms" ClassName="OpenFileDialog">选择文件</Tool>
+        <Tool Dll="System.Windows.Forms" ClassName="SaveFileDialog">保存文件</Tool>
+      </Tools>
+      <Tools Name="容器">
+        <Tool Dll="System.Windows.Forms" ClassName="Panel">面板</Tool>
+        <Tool Dll="System.Windows.Forms" ClassName="DataGrid">数据表格</Tool>
+        <Tool Dll="System.Windows.Forms" ClassName="ListBox">列表框</Tool>
+        <Tool Dll="System.Windows.Forms" ClassName="CheckedListBox">复选列表框</Tool>
+        <Tool Dll="System.Windows.Forms" ClassName="ListView">列表视图</Tool>
+        <Tool Dll="System.Windows.Forms" ClassName="TreeView">树形视图</Tool>
+        <Tool Dll="System.Windows.Forms" ClassName="TabControl">选项卡</Tool>
+      </Tools>
+      <Tools Name="数据">
+        <Tool Dll="System.Data.OleDb" ClassName="OleDbCommandBuilder">Ole数据库命令</Tool>
+        <Tool Dll="System.Data.OleDb" ClassName="OleDbConnection">Ole数据库连接</Tool>
+        <Tool Dll="System.Data.SqlClient" ClassName="SqlCommandBuilder">Sql数据库命令</Tool>
+        <Tool Dll="System.Data.SqlClient" ClassName="SqlConnection">Sql数据库连接</Tool>
+      </Tools>
+      <Tools Name="自定义">
+        <Tool Dll="TestUserControl" ClassName="UserControl1">性别选择</Tool>
+      </Tools>
+    </ToolPanel>
+    <DockPanel></DockPanel>
+    <DockPanel></DockPanel>
+    <DockPanel></DockPanel>
+    <DockPanel></DockPanel>
+  </LeftPanel>
+  <RightPanel>
+    <DockPanel></DockPanel>
+    <DockPanel></DockPanel>
+    <DockPanel></DockPanel>
+    <DockPanel></DockPanel>
+  </RightPanel>
+  <BottomPanel>
+    <DockPanel></DockPanel>
+    <DockPanel></DockPanel>
+    <DockPanel></DockPanel>
+    <DockPanel></DockPanel>
+    <DockPanel></DockPanel>
+  </BottomPanel>
+</Layout>
